@@ -1,6 +1,6 @@
 package Algorithm.sort;
 
-import com.company.test.undone.ListNode;
+import Algorithm.ListNode;
 
 public class LinkedListSort {
     public static void main(String[] args) {

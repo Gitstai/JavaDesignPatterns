@@ -2,7 +2,7 @@ package practice.fromWindows;
 
 public class SZY {
 
-    private volatile static com.company.test.SZY szy = null;
+    private volatile static SZY szy = null;
 
     public String getBOYFRIEND() {
         return BOYFRIEND;
@@ -18,10 +18,10 @@ public class SZY {
         this.BOYFRIEND = boyFriend;
     }
 
-    public static com.company.test.SZY back(String boyFriend){
+    public static SZY back(String boyFriend){
         if(szy == null){
-            synchronized (com.company.test.SZY.class){
-                if(szy == null){ szy = new com.company.test.SZY(boyFriend); }
+            synchronized (SZY.class){
+                if(szy == null){ szy = new SZY(boyFriend); }
             }
         }
         return szy;

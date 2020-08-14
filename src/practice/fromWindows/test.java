@@ -5,13 +5,13 @@ public class test {
 
 
     public void increase(){
-        synchronized (com.company.test.test.class){
+        synchronized (test.class){
             inc++;
         }
     }
 
     public static void main(String[] args) {
-        final com.company.test.test test = new com.company.test.test();
+        final test test = new test();
         for (int i = 0; i < 10; i++) {
             new Thread(){
                 @Override

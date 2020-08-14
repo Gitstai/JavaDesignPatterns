@@ -6,7 +6,7 @@ public class demo {
     /*1.找到t的根节点在s中的位置
      * 2.判断两颗二叉树是否相同
      * */
-    public boolean isSubtree(com.company.test.TreeNode s, com.company.test.TreeNode t){
+    public boolean isSubtree(TreeNode s, TreeNode t){
         boolean flag = false;
         //递归的出口条件
         if(s != null){
@@ -21,7 +21,7 @@ public class demo {
         }
         return flag;
     }
-    public static boolean pan(com.company.test.TreeNode A, com.company.test.TreeNode B){
+    public static boolean pan(TreeNode A, TreeNode B){
 
         if (A == null || B == null){
             return false;
@@ -36,7 +36,7 @@ public class demo {
         }
         return flag;
     }
-    public static boolean panSon(com.company.test.TreeNode A, com.company.test.TreeNode B){
+    public static boolean panSon(TreeNode A, TreeNode B){
         if (A == null && B == null){
             return true;
         }
