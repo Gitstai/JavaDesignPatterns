@@ -32,4 +32,36 @@ public class QuickSort {
         sort(arr, low, left - 1);
         sort(arr, left + 1, high);
     }
+    private static void quickSort(int[]a,int low,int high){
+        int i = low;
+        int j = high;
+        int x;
+        if (low >= high){
+            return;
+        }
+        int temp = a[low];
+        while ( i < j ){
+
+            while(a[j] <= temp && i < j){
+                --j;
+            }
+
+            while(a[i] >= temp && i < j){
+                ++i;
+            }
+
+            if (i < j){
+                x = a[j];
+                a[j] = a[i];
+                a[i] = x;
+            }
+            if(i == j){
+                x = a[i];
+                a[i] = a[low];
+                a[low] = x;
+            }
+        }
+        quickSort(a,low,i-1);
+        quickSort(a,i+1,high);
+    }
 }
